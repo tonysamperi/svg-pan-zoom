@@ -50,7 +50,6 @@ export interface Options {
   onZoom?: (newScale: number) => void;
   beforePan?: (oldPan: Point, newPan: Point) => void | boolean | PointModifier;
   onPan?: (newPan: Point) => void;
-  onRotate?: (point: Point) => void;
   onUpdatedCTM?: (newCTM: SVGMatrix) => void;
   customEventsHandler?: CustomEventHandler; // (default null)
   eventsListenerElement?: SVGElement; // (default null)
@@ -144,8 +143,6 @@ export interface Instance {
   getPan(): Point;
 
   resetPan(): Instance;
-
-  rotate(): Instance;
 
   enableZoom(): Instance;
 
